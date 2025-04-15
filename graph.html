@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchHelper - Grafik Fungsi</title>    
+    <link rel="stylesheet" href="graph.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main class="container">
+        <section class="graph-plotter">
+            <h2>Grafik Fungsi Matematika</h2>
+            <p class="subtitle">Visualisasikan berbagai fungsi matematika dalam bentuk grafik</p>
+            
+            <div class="graph-controls">
+                <div class="function-selector">
+                    <label for="function-type">Pilih Jenis Fungsi:</label>
+                    <select id="function-type">
+                        <option value="linear">Linear (y = mx + c)</option>
+                        <option value="quadratic">Kuadrat (y = ax² + bx + c)</option>
+                        <option value="cubic">Kubik (y = ax³ + bx² + cx + d)</option>
+                        <option value="trigonometric">Trigonometri (y = a sin(bx + c) + d)</option>
+                        <option value="exponential">Eksponensial (y = a e^(bx))</option>
+                    </select>
+                </div>
+                
+                <div class="function-inputs">
+                    <!-- Linear Function -->
+                    <div class="input-group active" id="linear-inputs">
+                        <label>y = </label>
+                        <input type="number" id="linear-m" value="1" step="0.1">
+                        <span>x + </span>
+                        <input type="number" id="linear-c" value="0" step="0.1">
+                    </div>
+                    
+                    <!-- Quadratic Function -->
+                    <div class="input-group" id="quadratic-inputs">
+                        <label>y = </label>
+                        <input type="number" id="quadratic-a" value="1" step="0.1">
+                        <span>x² + </span>
+                        <input type="number" id="quadratic-b" value="0" step="0.1">
+                        <span>x + </span>
+                        <input type="number" id="quadratic-c" value="0" step="0.1">
+                    </div>
+                    
+                    <!-- Cubic Function -->
+                    <div class="input-group" id="cubic-inputs">
+                        <label>y = </label>
+                        <input type="number" id="cubic-a" value="1" step="0.1">
+                        <span>x³ + </span>
+                        <input type="number" id="cubic-b" value="0" step="0.1">
+                        <span>x² + </span>
+                        <input type="number" id="cubic-c" value="0" step="0.1">
+                        <span>x + </span>
+                        <input type="number" id="cubic-d" value="0" step="0.1">
+                    </div>
+                    
+                    <!-- Trigonometric Function -->
+                    <div class="input-group" id="trigonometric-inputs">
+                        <label>y = </label>
+                        <input type="number" id="trig-a" value="1" step="0.1">
+                        <span>sin(</span>
+                        <input type="number" id="trig-b" value="1" step="0.1">
+                        <span>x + </span>
+                        <input type="number" id="trig-c" value="0" step="0.1">
+                        <span>) + </span>
+                        <input type="number" id="trig-d" value="0" step="0.1">
+                    </div>
+                    
+                    <!-- Exponential Function -->
+                    <div class="input-group" id="exponential-inputs">
+                        <label>y = </label>
+                        <input type="number" id="exp-a" value="1" step="0.1">
+                        <span>e^(</span>
+                        <input type="number" id="exp-b" value="1" step="0.1">
+                        <span>x)</span>
+                    </div>
+                </div>
+                
+                <div class="graph-settings">
+                    <div class="setting-group">
+                        <label for="x-min">X Min:</label>
+                        <input type="number" id="x-min" value="-10">
+                    </div>
+                    <div class="setting-group">
+                        <label for="x-max">X Max:</label>
+                        <input type="number" id="x-max" value="10">
+                    </div>
+                    <div class="setting-group">
+                        <label for="step">Step:</label>
+                        <input type="number" id="step" value="0.1" step="0.1" min="0.1">
+                    </div>
+                </div>
+                
+                <button id="plot-btn">Gambarkan Grafik</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+            
+            <div class="graph-container">
+                <canvas id="function-graph"></canvas>
+            </div>
+            
+            <div class="graph-info">
+                <h3>Informasi Grafik</h3>
+                <div id="graph-details"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MatchHelper. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="graph.js"></script>
+</body>
+</html>

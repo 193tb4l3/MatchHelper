@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchHelper - Kalkulator Geometri</title>
+    <link rel="stylesheet" href="geometry.css">
+</head>
+<body>
+    <main class="container">
+        <section class="geometry-calculator">
+            <h2>Kalkulator Geometri</h2>
+            <p class="subtitle">Hitung luas dan keliling berbagai bangun geometri</p>
+            
+            <div class="shape-selector">
+                <button class="shape-btn active" data-shape="square">Persegi</button>
+                <button class="shape-btn" data-shape="rectangle">Persegi Panjang</button>
+                <button class="shape-btn" data-shape="triangle">Segitiga</button>
+                <button class="shape-btn" data-shape="circle">Lingkaran</button>
+            </div>
+            
+            <div class="calculator-container">
+                <!-- Persegi -->
+                <div class="shape-form active" id="square-form">
+                    <h3>Persegi</h3>
+                    <div class="input-group">
+                        <label for="square-side">Sisi:</label>
+                        <input type="number" id="square-side" placeholder="Masukkan panjang sisi">
+                    </div>
+                    <button class="calculate-btn">Hitung</button>
+                    <div class="result-group">
+                        <p>Luas: <span id="square-area">-</span></p>
+                        <p>Keliling: <span id="square-perimeter">-</span></p>
+                    </div>
+                </div>
+                
+                <!-- Persegi Panjang -->
+                <div class="shape-form" id="rectangle-form">
+                    <h3>Persegi Panjang</h3>
+                    <div class="input-group">
+                        <label for="rectangle-length">Panjang:</label>
+                        <input type="number" id="rectangle-length" placeholder="Masukkan panjang">
+                        <label for="rectangle-width">Lebar:</label>
+                        <input type="number" id="rectangle-width" placeholder="Masukkan lebar">
+                    </div>
+                    <button class="calculate-btn">Hitung</button>
+                    <div class="result-group">
+                        <p>Luas: <span id="rectangle-area">-</span></p>
+                        <p>Keliling: <span id="rectangle-perimeter">-</span></p>
+                    </div>
+                </div>
+                
+                <!-- Segitiga -->
+                <div class="shape-form" id="triangle-form">
+                    <h3>Segitiga</h3>
+                    <div class="input-group">
+                        <label for="triangle-base">Alas:</label>
+                        <input type="number" id="triangle-base" placeholder="Masukkan alas">
+                        <label for="triangle-height">Tinggi:</label>
+                        <input type="number" id="triangle-height" placeholder="Masukkan tinggi">
+                        <label for="triangle-side1">Sisi 1:</label>
+                        <input type="number" id="triangle-side1" placeholder="Masukkan sisi 1">
+                        <label for="triangle-side2">Sisi 2:</label>
+                        <input type="number" id="triangle-side2" placeholder="Masukkan sisi 2">
+                    </div>
+                    <button class="calculate-btn">Hitung</button>
+                    <div class="result-group">
+                        <p>Luas: <span id="triangle-area">-</span></p>
+                        <p>Keliling: <span id="triangle-perimeter">-</span></p>
+                    </div>
+                </div>
+                
+                <!-- Lingkaran -->
+                <div class="shape-form" id="circle-form">
+                    <h3>Lingkaran</h3>
+                    <div class="input-group">
+                        <label for="circle-radius">Jari-jari:</label>
+                        <input type="number" id="circle-radius" placeholder="Masukkan jari-jari">
+                    </div>
+                    <button class="calculate-btn">Hitung</button>
+                    <div class="result-group">
+                        <p>Luas: <span id="circle-area">-</span></p>
+                        <p>Keliling: <span id="circle-circumference">-</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="visualization">
+                <h3>Visualisasi Bangun</h3>
+                <div class="shape-visual" id="shape-visual">
+                    <svg id="shape-svg" width="200" height="200" viewBox="0 0 200 200"></svg>
+                </div>
+                <div class="shape-info" id="shape-info">
+                    <p><strong>Bangun:</strong> <span id="current-shape">Persegi</span></p>
+                    <p><strong>Dimensi:</strong> <span id="shape-dimensions">Sisi: -</span></p>
+                    <p><strong>Luas:</strong> <span id="visual-area">-</span></p>
+                    <p><strong>Keliling:</strong> <span id="visual-perimeter">-</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MatchHelper. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="geometry.js"></script>
+</body>
+</html>

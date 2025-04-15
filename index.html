@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchHelper - Bantuan Belajar Matematika Profesional</title>
+    <link rel="icon" href="mt.png" type="image/png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MatchHelper</h1>
+                <p>Belajar Matematika Jadi Mudah</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#kalkulator">Kalkulator</a></li>
+                    <li><a href="#materi">Materi</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Belajar Matematika dengan Cara Menyenangkan</h2>
+                    <p>MatchHelper menyediakan alat bantu belajar matematika yang interaktif dan mudah dipahami untuk semua tingkat pendidikan.</p>
+                    <a href="#kalkulator" class="btn btn-primary">Mulai Sekarang</a>
+                </div>
+                <div class="hero-image">
+                    <img src="mt1.png" alt="Ilustrasi Matematika">
+                </div>
+            </div>
+        </section>
+
+        <section id="fitur" class="features">
+            <div class="container">
+                <h2 class="section-title">Fitur Unggulan</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Kalkulator Cerdas</h3>
+                        <p>Kalkulator dengan langkah penyelesaian untuk memahami proses perhitungan.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Materi Lengkap</h3>
+                        <p>Kumpulan materi matematika dari SD sampai SMA dengan penjelasan sederhana.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Visualisasi Grafik</h3>
+                        <p>Alat visualisasi fungsi matematika untuk pemahaman yang lebih baik.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Latihan Soal</h3>
+                        <p>Bank soal dengan pembahasan untuk melatih kemampuan matematika.</p>
+                    </div>
+                    <a href="fitur.html" class="btn btn-secondary">Mulai Belajar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="kalkulator" class="calculator-section">
+            <div class="container">
+                <h2 class="section-title">Kalkulator Matematika</h2>
+                <div class="calculator-container">
+                    <div class="calculator-display">
+                        <input type="text" id="calc-input" readonly>
+                        <div id="calc-result">0</div>
+                    </div>
+                    <div class="calculator-buttons">
+                        <button class="calc-btn operator" data-value="C">C</button>
+                        <button class="calc-btn operator" data-value="±">±</button>
+                        <button class="calc-btn operator" data-value="%">%</button>
+                        <button class="calc-btn operator" data-value="/">/</button>
+                        
+                        <button class="calc-btn" data-value="7">7</button>
+                        <button class="calc-btn" data-value="8">8</button>
+                        <button class="calc-btn" data-value="9">9</button>
+                        <button class="calc-btn operator" data-value="*">×</button>
+                        
+                        <button class="calc-btn" data-value="4">4</button>
+                        <button class="calc-btn" data-value="5">5</button>
+                        <button class="calc-btn" data-value="6">6</button>
+                        <button class="calc-btn operator" data-value="-">-</button>
+                        
+                        <button class="calc-btn" data-value="1">1</button>
+                        <button class="calc-btn" data-value="2">2</button>
+                        <button class="calc-btn" data-value="3">3</button>
+                        <button class="calc-btn operator" data-value="+">+</button>
+                        
+                        <button class="calc-btn" data-value="0">0</button>
+                        <button class="calc-btn" data-value=".">.</button>
+                        <button class="calc-btn operator" data-value="=">=</button>
+                    </div>
+                </div>
+                <div class="calculator-advanced">
+                    <h3>Alat Matematika Lanjutan</h3>
+                    <div class="advanced-buttons">
+                        <a href="quadratic.html" class="category-btn">
+                        <button class="adv-btn">Persamaan Kuadrat</button>
+                        </a>
+                        <a href="geometry.html" class="category-btn">
+                        <button class="adv-btn">Geometri</button>
+                        </a>
+                        <a href="graph.html" class="category-btn">
+                        <button class="adv-btn">Grafik Fungsi</button>
+                        </a>
+                        <a href="statistics.html" class="category-btn">
+                        <button class="adv-btn">Statistika</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="materi" class="materials">
+            <div class="container">
+                <h2 class="section-title">Materi Pembelajaran</h2>
+                <div class="material-categories">
+                    <div class="category-card" data-level="sd">
+                        <h3>Matematika SD</h3>
+                        <ul>
+                            <li>Operasi Hitung Dasar</li>
+                            <li>Bangun Datar</li>
+                            <li>Pengukuran</li>
+                            <li>Statistika Sederhana</li>
+                        </ul>
+                        <a href="sd.html" class="category-btn">Pelajari</a>
+                    </div>
+                    <div class="category-card" data-level="smp">
+                        <h3>Matematika SMP</h3>
+                        <ul>
+                            <li>Aljabar Dasar</li>
+                            <li>Persamaan Linear</li>
+                            <li>Teorema Pythagoras</li>
+                            <li>Peluang</li>
+                        </ul>
+                        <a href="smp.html" class="category-btn">Pelajari</a>
+                    </div>
+                    <div class="category-card" data-level="sma">
+                        <h3>Matematika SMA</h3>
+                        <ul>
+                            <li>Trigonometri</li>
+                            <li>Kalkulus Dasar</li>
+                            <li>Matriks</li>
+                            <li>Fungsi Kuadrat</li>
+                        </ul>
+                        <a href="sma.html" class="category-btn"> Pelajari</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="tentang">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Tentang MatchHelper</h3>
+                    <p>MatchHelper adalah platform pembelajaran matematika online yang bertujuan membuat belajar matematika menjadi lebih mudah dan menyenangkan bagi semua orang.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#fitur">Fitur</a></li>
+                        <li><a href="#kalkulator">Kalkulator</a></li>
+                        <li><a href="#materi">Materi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontak</h3>
+                    <p><i class="fas fa-envelope"></i> info@matchhelper.com</p>
+                    <p><i class="fas fa-phone"></i> +62 </p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bot1tom">
+                <p>&copy; 2025 MatchHelper. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

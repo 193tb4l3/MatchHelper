@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchHelper - Kalkulator Grafik Fungsi</title>
+    <link rel="stylesheet" href="sma.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <h1>MatchHelper</h1>
+        <p>Bantuan Belajar Matematika Profesional</p>
+    </header>
+
+    <main>
+        <section class="graph-section">
+            <h2>Grafik Fungsi</h2>
+            <div class="graph-container">
+                <div class="controls">
+                    <div class="function-input">
+                        <label for="function">Fungsi (gunakan x):</label>
+                        <input type="text" id="function" placeholder="contoh: sin(x) atau x^2">
+                    </div>
+                    
+                    <div class="range-container">
+                        <div class="range-input">
+                            <label for="x-min">X Minimum:</label>
+                            <input type="number" id="x-min" value="-10" step="0.5">
+                        </div>
+                        <div class="range-input">
+                            <label for="x-max">X Maximum:</label>
+                            <input type="number" id="x-max" value="10" step="0.5">
+                        </div>
+                    </div>
+                    
+                    <div class="fraction-input">
+                        <label>Presisi:</label>
+                        <div class="fraction-controls">
+                            <input type="number" id="step-whole" value="0" min="0">
+                            <div class="fraction">
+                                <input type="number" id="step-numerator" value="1" min="0" max="9">
+                                <span>/</span>
+                                <input type="number" id="step-denominator" value="2" min="1" max="10">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="plot-btn">Gambarkan Grafik</button>
+                </div>
+                
+                <div class="graph">
+                    <canvas id="graph-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 MatchHelper - Matematika SMA</p>
+    </footer>
+
+    <script src="sma.js"></script>
+</body>
+</html>

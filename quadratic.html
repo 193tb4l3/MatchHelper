@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchHelper - Solver Persamaan Kuadrat</title>
+    <link rel="stylesheet" href="quadratic.css">
+</head>
+<body>
+    <main class="container">
+        <section class="quadratic-solver">
+            <h2>Solver Persamaan Kuadrat</h2>
+            <p class="subtitle">Selesaikan persamaan bentuk ax² + bx + c = 0 dengan langkah demi langkah</p>
+            
+            <div class="solver-container">
+                <div class="input-section">
+                    <div class="equation-display">
+                        <input type="number" id="a" placeholder="a">x² + 
+                        <input type="number" id="b" placeholder="b">x + 
+                        <input type="number" id="c" placeholder="c"> = 0
+                    </div>
+                    <button id="solve-btn">Selesaikan</button>
+                    <button id="reset-btn">Reset</button>
+                </div>
+                
+                <div class="result-section">
+                    <h3>Hasil:</h3>
+                    <div id="roots-result" class="result-box"></div>
+                    
+                    <h3>Langkah Penyelesaian:</h3>
+                    <div id="steps-result" class="steps-box"></div>
+                </div>
+            </div>
+            
+            <div class="examples-section">
+                <h3>Contoh Soal:</h3>
+                <div class="example-buttons">
+                    <button data-a="1" data-b="-5" data-c="6">x² - 5x + 6 = 0</button>
+                    <button data-a="2" data-b="5" data-c="-3">2x² + 5x - 3 = 0</button>
+                    <button data-a="1" data-b="-4" data-c="5">x² - 4x + 5 = 0</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MatchHelper. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="quadratic.js"></script>
+</body>
+</html>

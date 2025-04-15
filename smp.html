@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchHelper - Bantuan Belajar Matematika Profesional</title>
+    <link rel="stylesheet" href="smp.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#aljabar">Aljabar</a></li>
+                <li><a href="#geometri">Geometri</a></li>
+                <li><a href="#statistika">Statistika</a></li>
+            </ul>
+        </nav>
+        <h1>Matematika SMP</h1>
+    </header>
+    
+    <main>
+        <section id="aljabar">
+            <h2>Aljabar Dasar</h2>
+            <div class="algebra-calculator">
+                <h3>Penyelesaian Persamaan Linear</h3>
+                <p>Selesaikan persamaan bentuk: ax + b = c</p>
+                <input type="number" id="a" placeholder="a">x + 
+                <input type="number" id="b" placeholder="b"> = 
+                <input type="number" id="c" placeholder="c">
+                <button onclick="solveLinear()">Selesaikan</button>
+                <div id="linear-solution"></div>
+            </div>
+        </section>
+        
+        <section id="geometri">
+            <h2>Geometri</h2>
+            <div class="geometry-tools">
+                <div class="pythagoras">
+                    <h3>Teorema Pythagoras</h3>
+                    <p>Hitung sisi miring segitiga siku-siku:</p>
+                    <input type="number" id="side-a" placeholder="Sisi a">² + 
+                    <input type="number" id="side-b" placeholder="Sisi b">² = 
+                    <button onclick="calculateHypotenuse()">Hitung</button>
+                    <div id="hypotenuse-result"></div>
+                </div>
+                
+                <div class="circle-area">
+                    <h3>Luas Lingkaran</h3>
+                    <p>Masukkan jari-jari:</p>
+                    <input type="number" id="radius" placeholder="Jari-jari (r)">
+                    <button onclick="calculateCircleArea()">Hitung Luas</button>
+                    <div id="circle-area-result"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 Matematika SMP - MatchHelper</p>
+    </footer>
+    
+    <script src="smp.js"></script>
+</body>
+</html>

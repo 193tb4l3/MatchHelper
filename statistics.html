@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchHelper - Alat Statistika</title>  
+    <link rel="stylesheet" href="statistics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main class="container">
+        <section class="statistics-tool">
+            <h2>Alat Analisis Statistika</h2>
+            <p class="subtitle">Hitung berbagai ukuran statistik dan visualisasikan data</p>
+            
+            <div class="data-input-section">
+                <h3>Masukkan Data</h3>
+                <div class="input-methods">
+                    <div class="input-method active" id="manual-input">
+                        <textarea id="data-input" placeholder="Masukkan data, pisahkan dengan koma atau spasi
+Contoh: 5, 7, 8, 9, 10 atau 5 7 8 9 10"></textarea>
+                    </div>
+                    <div class="input-method" id="random-input">
+                        <div class="random-controls">
+                            <div class="control-group">
+                                <label for="data-count">Jumlah Data:</label>
+                                <input type="number" id="data-count" value="10" min="5" max="100">
+                            </div>
+                            <div class="control-group">
+                                <label for="min-value">Min:</label>
+                                <input type="number" id="min-value" value="1">
+                            </div>
+                            <div class="control-group">
+                                <label for="max-value">Max:</label>
+                                <input type="number" id="max-value" value="10">
+                            </div>
+                            <button id="generate-random">Generate Data</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-actions">
+                    <button id="calculate-btn">Hitung Statistik</button>
+                    <button id="clear-btn">Bersihkan</button>
+                    <div class="input-switch">
+                        <button class="switch-btn active" data-method="manual">Manual Input</button>
+                        <button class="switch-btn" data-method="random">Random Data</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <div class="statistics-results">
+                    <h3>Hasil Statistik</h3>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <h4>Mean (Rata-rata)</h4>
+                            <p id="mean-result">-</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Median</h4>
+                            <p id="median-result">-</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Modus</h4>
+                            <p id="mode-result">-</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Range</h4>
+                            <p id="range-result">-</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Varians</h4>
+                            <p id="variance-result">-</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Deviasi Standar</h4>
+                            <p id="stddev-result">-</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Q1 (Kuartil 1)</h4>
+                            <p id="q1-result">-</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Q3 (Kuartil 3)</h4>
+                            <p id="q3-result">-</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>IQR</h4>
+                            <p id="iqr-result">-</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="data-visualization">
+                    <h3>Visualisasi Data</h3>
+                    <div class="chart-tabs">
+                        <button class="chart-tab active" data-chart="histogram">Histogram</button>
+                        <button class="chart-tab" data-chart="boxplot">Box Plot</button>
+                        <button class="chart-tab" data-chart="scatter">Scatter Plot</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="statistics-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MatchHelper. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="statistics.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Base Styles */
+:root {
+    --primary: #3498db;
+    --secondary: #2980b9;
+    --accent: #e74c3c;
+    --text: #2c3e50;
+    --light: #ecf0f1;
+    --white: #ffffff;
+}
+
+/* styles.css untuk SD */
+body {
+    background-color: #f0f9ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.calculator-simple {
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+input, select, button {
+    padding: 8px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shapes {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.shape {
+    cursor: pointer;
+    text-align: center;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    background-color: #FF9800;
+    margin: 0 auto;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid #2196F3;
+    margin: 0 auto;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #E91E63;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#shape-info {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

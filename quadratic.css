@@ -1,0 +1,112 @@
+/* quadratic.css */
+.quadratic-solver {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.quadratic-solver h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.solver-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.input-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.equation-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.equation-display input {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+#reset-btn {
+    background: #e74c3c;
+}
+
+#reset-btn:hover {
+    background: #c0392b;
+}
+
+.result-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.result-box, .steps-box {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.steps-box p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.examples-section {
+    margin-top: 40px;
+}
+
+.example-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.example-buttons button {
+    background: #2ecc71;
+}
+
+.example-buttons button:hover {
+    background: #27ae60;
+}
+

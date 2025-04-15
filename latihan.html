@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal - MatchHelper</title>
+    <link rel="icon" href="mt.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="latihan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>MatchHelper</h1>
+                    <p>Belajar Matematika Jadi Mudah</p>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Beranda</a></li>
+                    <li><a href="fitur.html">Fitur</a></li>
+                    <li><a href="index.html#kalkulator">Kalkulator</a></li>
+                    <li><a href="index.html#materi">Materi</a></li>
+                    <li><a href="latihan.html" class="active">Latihan</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="latihan-page">
+        <section class="latihan-controls">
+            <div class="container">
+                <div class="control-panel">
+                    <div class="level-selector">
+                        <h3>Pilih Tingkat Kesulitan:</h3>
+                        <div class="level-options">
+                            <button class="level-btn active" data-level="all">Semua</button>
+                            <button class="level-btn" data-level="easy">Mudah</button>
+                            <button class="level-btn" data-level="medium">Sedang</button>
+                            <button class="level-btn" data-level="hard">Sulit</button>
+                        </div>
+                    </div>
+                    <div class="topic-selector">
+                        <h3>Pilih Topik:</h3>
+                        <select id="topic-select">
+                            <option value="all">Semua Topik</option>
+                            <option value="aljabar">Aljabar</option>
+                            <option value="geometri">Geometri</option>
+                            <option value="trigonometri">Trigonometri</option>
+                            <option value="kalkulus">Kalkulus</option>
+                            <option value="statistika">Statistika</option>
+                        </select>
+                    </div>
+                    <button id="generate-btn" class="btn-generate">Generate Soal</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="latihan-container">
+            <div class="container">
+                <div class="quiz-info">
+                    <div class="quiz-stats">
+                        <span id="question-count">0 soal tersedia</span>
+                        <span id="timer">Waktu: 00:00</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span id="progress-text">0/0</span>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-box">
+                        <h2 id="question-text">Pilih tingkat kesulitan dan topik, lalu klik "Generate Soal" untuk memulai</h2>
+                        <div id="options-container" class="options-container">
+                            <!-- Options will be generated here -->
+                        </div>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button id="prev-btn" class="nav-btn" disabled>
+                            <i class="fas fa-arrow-left"></i> Sebelumnya
+                        </button>
+                        <button id="next-btn" class="nav-btn">
+                            Selanjutnya <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button id="submit-btn" class="nav-btn submit-btn" disabled>
+                            Submit Jawaban
+                        </button>
+                    </div>
+                </div>
+
+                <div class="result-container hidden">
+                    <h2>Hasil Latihan</h2>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span id="score-percent">0</span>%
+                        </div>
+                        <div class="score-details">
+                            <p>Jawaban Benar: <span id="correct-answers">0</span></p>
+                            <p>Jawaban Salah: <span id="wrong-answers">0</span></p>
+                            <p>Total Waktu: <span id="total-time">00:00</span></p>
+                        </div>
+                    </div>
+                    <div class="answer-review">
+                        <h3>Pembahasan Jawaban</h3>
+                        <div id="answer-review-content">
+                            <!-- Answer review will be generated here -->
+                        </div>
+                    </div>
+                    <button id="restart-btn" class="btn-restart">Mulai Latihan Baru</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Tentang MatchHelper</h3>
+                    <p>MatchHelper adalah platform pembelajaran matematika online yang bertujuan membuat belajar matematika menjadi lebih mudah dan menyenangkan bagi semua orang.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html#home">Beranda</a></li>
+                        <li><a href="fitur.html">Fitur</a></li>
+                        <li><a href="index.html#kalkulator">Kalkulator</a></li>
+                        <li><a href="index.html#materi">Materi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontak</h3>
+                    <p><i class="fas fa-envelope"></i> info@matchhelper.com</p>
+                    <p><i class="fas fa-phone"></i> +62 123 4567 890</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MatchHelper. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="latihan.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
